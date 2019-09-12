@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm</title>
+</head>
+<body>
+<input id="nhapvao" type="text" placeholder="Name"/>
+<button type="button" onclick="timkiem()">Tìm Kiếm</button>
+<script>
+    let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let arr2 = ["Ursa", "Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+    function timkiem() {
+        let eval = document.getElementById('nhapvao').value;
+        for (let i = 0; i < arr1.length; i++) {
+            if (eval === arr1[i]) {
+                eval = arr2[i];
+                document.getElementById('nhapvao').value = eval;
+                break;
+            } else {
+                document.getElementById('nhapvao').value = "Not Exist"
+            }
+        }
+    }
+</script>
+</body>
+</html>

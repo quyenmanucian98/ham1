@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm</title>
+</head>
+<body>
+Số thứ nhất: <input placeholder="Number 1" id="sothunhat" type="text"/><br>
+Số thứ hai : <input placeholder="Number 2" id="sothuhai" type="text"/><br>
+<button type="button" onclick="ketqua()">Kết Quả</button>
+<div id="hienthi"></div>
+<script>
+
+   function ketqua() {
+       let number1 = +document.getElementById('sothunhat').value;
+       let nuber2 = +document.getElementById('sothuhai').value;
+       if (number1>nuber2){
+           document.getElementById('hienthi').innerHTML= number1+"lớn hơn"+nuber2;
+       }else {
+           let sum= number1+nuber2;
+           document.getElementById('hienthi').innerHTML=sum;
+       }
+   }
+</script>
+</body>
+</html>
