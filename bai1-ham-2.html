@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm</title>
+</head>
+<body>
+<fieldset>
+    <legend> Bài 1: Bình Phương 1 số</legend>
+    <input id="nhapvao" type="text" placeholder="Nhập Số Cần Tính">
+    <button type="button" onclick="binhphuong()">Bình Phương</button>
+    <script>
+        function binhphuong() {
+            let number = document.getElementById('nhapvao').value;
+            let square = number * number;
+            document.getElementById('nhapvao').value = square
+        }
+    </script>
+</fieldset>
+<br>
+<fieldset>
+    <legend>Bài 2: Diện tíc và Chu vi hình tròn</legend>
+    <input id="bankinh" type="text" placeholder="Nhập Bán Kính"/>
+    <button type="button" onclick="tinhS()">Diện Tích</button>
+    <button type="button" onclick="tinhC()">Chu Vi</button>
+    <script>
+
+        function tinhS() {
+            let banKinh = document.getElementById('bankinh').value;
+            let dienTich = banKinh * banKinh * 3.14
+            document.getElementById('bankinh').value = dienTich;
+        }
+
+        function tinhC() {
+            let banKinh = document.getElementById('bankinh').value;
+            let chuVi = banKinh * 2 * 3.14;
+            document.getElementById('bankinh').value = chuVi;
+        }
+    </script>
+</fieldset>
+<br>
+<fieldset>
+    <legend>Bài 3:Tính Giai thừa của 1 số</legend>
+    <input id="giaithua" type="text" placeholder="Nhập Số Cần Tính"/>
+    <button type="button" onclick="giaiThua()">Giai Thừa</button>
+    <script>
+        let sum = 1;
+
+        function giaiThua() {
+            let giaiThua = +document.getElementById('giaithua').value;
+            for (let i = 1; i <= giaiThua; i++) {
+                sum = sum * i;
+                document.getElementById('giaithua').value = sum;
+            }
+        }
+    </script>
+</fieldset><br>
+<fieldset>
+    <legend>Bài 4: True & False</legend>
+    <input type="text" id="true"/>
+    <button type="button" onclick="falsee()">Kiểm Tra</button>
+    <script>
+        function falsee() {
+            let fales = document.getElementById('true').value;
+            if (fales % 1==0){
+                document.getElementById('true').value="True";
+            }else if (fales===1){
+                document.getElementById('true').value="True"
+            }else {
+                document.getElementById('true').value= "False"
+            }
+        }
+    </script>
+</fieldset><br>
+<fieldset>
+    <legend>Bài 5: Tìm số lớn nhất</legend>
+    <input type="text" id="arr10"/>
+    <button type="button" onclick="hienthi()">Đảo Ngược</button>
+    <script>
+        let arr15=[];
+        function hienthi() {
+            let arrNumber = document.getElementById('arr10').value;
+            arr15.push(arrNumber);
+            arr15.reverse();
+            document.getElementById('arr10').value=arr15;
+        }
+
+    </script>
+</fieldset>
+<fieldset>
+    <legend>Bài 7: đổi vị trí 2 số nguyên </legend>
+    <input id="so1" type="text" placeholder="Số Thứ Nhất"/>
+    <input id="so2" type="text" placeholder="Số Thứ hai"/>
+    <button type="button" onclick="doicho()">Đổi Chỗ</button>
+    <script>
+        function doicho() {
+            let number1 =document.getElementById('so1').value;
+            let number2 = document.getElementById('so2').value;
+            let eval = number1;
+            number1 = number2;
+            number2=eval;
+            document.getElementById('so1').value=number1;
+            document.getElementById('so2').value=eval;
+        }
+    </script>
+</fieldset>
+</body>
+</html>
